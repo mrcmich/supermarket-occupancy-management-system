@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/default.css') }}">
+        <title>OOP - Feed disponibili</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Online Occupancy Prediction</h1>
+            <p>Predici l'occupazione delle tue sedi commerciali in un click</p>
+        </div>
+
+        <h2 class="page-description">Feed disponibili</h2>
+
+        <form method="POST" action="{{ url_for('loading_screen') }}">
+            {% for feed in feeds %}
+                <input type="submit" name="feed" class="feed-box-title" value="{{ feed.name }}">
+
+                <div class="feed-box">
+                    <h3>Chiave:</h3>
+                    {{ feed.key }}
+            
+                    <h3>Descrizione: </h3>
+                    {% if feed.description %}
+                        {{ feed.description }}
+                    {% else %} 
+                        Nessuna descrizione disponibile.
+                    {% endif %}
+                </div>
+            {% endfor %} 
+        </form>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+Verificare di avere le seguenti librerie:
+adafruit-io 
+flask
+pystan v2.19.1.1 (dipendenza di prophet)
+prophet
+pandas
+requests
+
+N.B. Per l'installazione di pystan su Windows, seguire la procedura qui indicata:
+     https://pystan2.readthedocs.io/en/latest/windows.html
+
+

@@ -1,0 +1,64 @@
+body {
+    font-family: monospace;
+    font-size: medium;
+}
+
+.header {
+    margin-bottom: 4%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 17.4%;
+    padding-right: 2%;
+    color: white;
+    background-color: rgb(217, 101, 18);
+    font-size: larger;
+}
+
+.page-description {
+    margin-left: 17.4%;
+    margin-bottom: 3%;
+    font-size: 2em;
+}
+
+.feed-box-title {
+    margin-left: 17%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    background-color: white;
+    color: rgba(217, 101, 18, 0.5);
+    border-style: none;
+    font-family: monospace;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.prediction-title {
+    margin-left: 17.4%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.feed-box-title:hover {
+    color: rgba(217, 101, 18, 1);
+    cursor: pointer;
+}
+
+.feed-box {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 4%;
+    border-top: 0.25em solid rgb(217, 101, 18);
+    padding-left: 2.4%;
+}
+
+a {
+    margin: 17.4%;
+    color: rgba(217, 101, 18, 0.5);
+    font-size: large;
+}
+
+a:hover {
+    color: rgba(217, 101, 18, 1);
+}

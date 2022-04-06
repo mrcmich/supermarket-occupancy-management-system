@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; URL='{{ url_for('generate_predictions', feed_key=feed_key) }}'" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/default.css') }}">
+        <title>OOP - Generazione predizioni</title>
+
+        <style>
+            #loading-image {
+                height: 100px;
+                width: 100px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #loading-info {
+                margin-left: 0%;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Online Occupancy Prediction</h1>
+            <p>Predici l'occupazione delle tue sedi commerciali in un click</p>
+        </div>
+
+        <img id="loading-image" src="{{ url_for('static', filename='images/loading.gif') }}">
+        <h2 id="loading-info" class="page-description">Stiamo generando le predizioni per {{ feed }}...</h2>
+    </body>
+</html>

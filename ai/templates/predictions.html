@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/default.css') }}">
+        <title>OOP - Predizioni {{ feed }}</title>
+
+        <style>
+            .prediction {
+                margin-top: -4.5%;
+                margin-bottom: 3%;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Online Occupancy Prediction</h1>
+            <p>Predici l'occupazione delle tue sedi commerciali in un click</p>
+        </div>
+
+        <p><a href="{{ url_for('list_feeds') }}">Torna alla lista dei feed</a></p>
+        <h2 class="page-description">Predizioni per {{ feed }}</h2>
+
+        {% for periods in periods_list %}
+            <h2 class="prediction-title">Prossimi {{ periods }} giorni</h2>
+            <div class="feed-box"><br></div>
+            
+            <div class="prediction">
+                <img src="{{ url_for('static', filename='plots/' + filenames[periods] + '.png') }}" 
+                    alt="Impossibile caricare predizione. Verifica il feed inserito.">
+            </div>
+        {% endfor %}
+    </body>
+</html>
